@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj": {}
+    "C:\\CA2023\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj": {}
   },
   "projects": {
-    "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj": {
+    "C:\\CA2023\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj",
+        "projectUniqueName": "C:\\CA2023\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj",
         "projectName": "MvcPhones",
-        "projectPath": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj",
+        "projectPath": "C:\\CA2023\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj",
         "packagesPath": "C:\\Users\\graha\\.nuget\\packages\\",
-        "outputPath": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\obj\\",
+        "outputPath": "C:\\CA2023\\CA2023\\CA2023\\MvcPhones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\graha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,30 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
