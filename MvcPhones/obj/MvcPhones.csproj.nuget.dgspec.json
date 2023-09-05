@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj": {}
+    "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj": {}
   },
   "projects": {
-    "C:\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj": {
+    "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj",
+        "projectUniqueName": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj",
         "projectName": "MvcPhones",
-        "projectPath": "C:\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj",
+        "projectPath": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj",
         "packagesPath": "C:\\Users\\graha\\.nuget\\packages\\",
-        "outputPath": "C:\\CA2023\\CA2023\\MvcPhones\\obj\\",
+        "outputPath": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\graha\\AppData\\Roaming\\NuGet\\NuGet.Config",

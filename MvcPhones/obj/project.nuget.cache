@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jfuFIrE1xY1unu8NSzUBU+SjDtNh4VXZAYolCYHHn548Ex/hh98Owl8hj1/o0mN32UpckuTY+BELJG9t5PJwuQ==",
+  "dgSpecHash": "PRIrBGxg6ci3/KJoAYr3YJ6QlNxmXlIOITyFrGRX2gf6MXADQvQJfqR5bBDagJVASGJuQjovarMPRMcCFYS1uA==",
   "success": true,
-  "projectFilePath": "C:\\CA2023\\CA2023\\MvcPhones\\MvcPhones.csproj",
+  "projectFilePath": "C:\\CA2023\\CA2023\\CA2023\\mvcphones\\MvcPhones.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

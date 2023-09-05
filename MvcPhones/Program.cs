@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 // Register HTTP Client - For RetroShirtsApi/Products
 builder.Services.AddHttpClient("PhonesApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5253/");
+    client.BaseAddress = new Uri("http://localhost:5002/");
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue(
             mediaType: "application/json",
