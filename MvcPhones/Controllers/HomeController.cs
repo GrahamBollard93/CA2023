@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MvcPhones.Models;
 
+
 namespace MvcPhones.Controllers;
 
 public class HomeController : Controller

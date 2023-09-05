@@ -10,7 +10,7 @@ using PhonesApi.Model;
 
 namespace PhonesApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/phones")]
     [ApiController]
     public class PhonesController : ControllerBase
     {
