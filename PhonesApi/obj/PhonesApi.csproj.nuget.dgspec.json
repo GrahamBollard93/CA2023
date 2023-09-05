@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CA2023\\CA2023\\CA2023\\PhonesApi\\PhonesApi.csproj": {}
+    "C:\\CA2023\\CA2023\\CA2023\\phonesapi\\PhonesApi.csproj": {}
   },
   "projects": {
-    "C:\\CA2023\\CA2023\\CA2023\\PhonesApi\\PhonesApi.csproj": {
+    "C:\\CA2023\\CA2023\\CA2023\\phonesapi\\PhonesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CA2023\\CA2023\\CA2023\\PhonesApi\\PhonesApi.csproj",
+        "projectUniqueName": "C:\\CA2023\\CA2023\\CA2023\\phonesapi\\PhonesApi.csproj",
         "projectName": "PhonesApi",
-        "projectPath": "C:\\CA2023\\CA2023\\CA2023\\PhonesApi\\PhonesApi.csproj",
+        "projectPath": "C:\\CA2023\\CA2023\\CA2023\\phonesapi\\PhonesApi.csproj",
         "packagesPath": "C:\\Users\\graha\\.nuget\\packages\\",
-        "outputPath": "C:\\CA2023\\CA2023\\CA2023\\PhonesApi\\obj\\",
+        "outputPath": "C:\\CA2023\\CA2023\\CA2023\\phonesapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\graha\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -24037,11 +24037,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -24269,6 +24264,11 @@
     {
       "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ]
