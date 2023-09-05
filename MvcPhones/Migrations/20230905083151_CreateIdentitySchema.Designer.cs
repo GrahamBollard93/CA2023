@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MvcPhones.Areas.Identity.Data;
+using MvcPhones.Data;
 
 #nullable disable
 
 namespace MvcPhones.Migrations
 {
-    [DbContext(typeof(MvcPhonesIdentityDbContext))]
+    [DbContext(typeof(MvcPhonesDbContext))]
     [Migration("20230905083151_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
