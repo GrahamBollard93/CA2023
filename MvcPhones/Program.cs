@@ -1,6 +1,14 @@
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using MvcPhones.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("MvcPhonesIdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'MvcPhonesIdentityDbContextConnection' not found.");
+
+builder.Services.AddDbContext<MvcPhonesDbContext>(options => options.UseSqlite(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<MvcPhonesDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
