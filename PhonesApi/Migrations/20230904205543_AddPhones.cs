@@ -18,7 +18,9 @@ namespace PhonesApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Brand = table.Column<string>(type: "TEXT", nullable: true),
                     Model = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    ImageUrl = table.Column<string>(type: "TEXT", nullable: true),
+                    Description = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

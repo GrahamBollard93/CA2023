@@ -20,16 +20,20 @@ public static class SeedData
                 Id = 1,
                 Brand = "Samsung",
                 Model = "Galaxy",
-                Price =
-            Convert.ToDecimal(12.99)
+                Price = 1200,
+                ImageUrl = "https://images.samsung.com/is/image/samsung/p6pim/ie/sm-a546blvceub/gallery/ie-galaxy-a54-5g-sm-a546-sm-a546blvceub-535797498?$650_519_PNG$",
+                Description = "Brand New Phone"
             },
+            
             new Phones
             {
-               Id = 2,
+                Id = 2,
                 Brand = "Samsung",
                 Model = "Galaxy",
-                Price =
-            Convert.ToDecimal(15.99)
+                Price = 1200,
+                ImageUrl = "https://images.samsung.com/is/image/samsung/p6pim/ie/sm-a546blvceub/gallery/ie-galaxy-a54-5g-sm-a546-sm-a546blvceub-535797498?$650_519_PNG$",
+                Description = "Brand New Phone"
+
             }
             );
             context.SaveChanges();

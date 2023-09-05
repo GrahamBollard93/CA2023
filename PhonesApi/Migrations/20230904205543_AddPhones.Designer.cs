@@ -34,6 +34,12 @@ namespace PhonesApi.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UrlImage")
+                        .HasColumnType("Text");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("Text");
+
                     b.HasKey("Id");
 
                     b.ToTable("Phone");
