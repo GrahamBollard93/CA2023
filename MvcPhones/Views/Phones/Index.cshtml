@@ -1,4 +1,4 @@
-@model PagedResult<MvcPhones.Models.Phones> 
+@model IEnumerable<MvcPhones.Models.Phones> 
 
 @{
     ViewData["Title"] = "Phones";
@@ -10,7 +10,7 @@
   <div class="row">
     
     
-    @foreach (var item in Model.Items ?? Enumerable.Empty<MvcPhones.Models.Phones>()) //https://learn.microsoft.com/en-us/answers/questions/1319417/how-to-fix-system-nullreferenceexception-object-re
+    @foreach (var item in Model) //https://learn.microsoft.com/en-us/answers/questions/1319417/how-to-fix-system-nullreferenceexception-object-re
     {
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
@@ -27,6 +27,7 @@
             <a class="btn btn-success float-right" asp-action="Details" asp-route-id="@item.Id">
               <i class="bi bi-eye-fill"></i> View Details
             </a>
+
           </div>
         </div>
       </div>
