@@ -10,32 +10,9 @@ namespace MvcPhones.Controllers
 {
     public class PhonesController : Controller
     {
-        private readonly MvcPhonesDbContext _context;
-
-        private readonly IHttpClientFactory _clientFactory;
-        
-        public PhonesController(MvcPhonesDbContext context, IHttpClientFactory clientFactory)
+         public IActionResult Index()
         {
-            _context = context;
-            _clientFactory = clientFactory;
+            return View();
         }
-
-        public async Task<IActionResult> Index()
-        {
-            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
-       
-            HttpRequestMessage request = new(method: HttpMethod.Get, 
-            requestUri: "/api/v1/phones"
-            );
-
-            HttpResponseMessage response = await client.SendAsync(request);
-
-            IEnumerable<Phones>? model = await response.Content.ReadFromJsonAsync<IEnumerable<Phones>>();
-
-            return View (model);
-        }
-
-        
-        
-    }
+   }
 }

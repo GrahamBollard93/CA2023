@@ -24267,8 +24267,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Index.cshtml",
+      "TargetPath": "Views\\Phones\\Index.cshtml",
       "FileKind": "mvc"
     }
   ]
