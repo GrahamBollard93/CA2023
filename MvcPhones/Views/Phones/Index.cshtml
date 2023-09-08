@@ -10,13 +10,13 @@
   <div class="row">
     
     
-    @foreach (var item in Model) //https://learn.microsoft.com/en-us/answers/questions/1319417/how-to-fix-system-nullreferenceexception-object-re
+    @foreach (var item in Model) 
     {
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.ImageUrl)" alt="@Html.DisplayNameFor(model => item.ImageUrl)">
           <div class="card-body">
-            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Brand)</h5>
+            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Brand, item.Model)</h5>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">@Html.DisplayNameFor(model => item.Brand): @Html.DisplayFor(modelItem => item.Brand)</li>

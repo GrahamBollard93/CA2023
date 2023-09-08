@@ -24270,6 +24270,11 @@
       "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Index.cshtml",
       "TargetPath": "Views\\Phones\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Create.cshtml",
+      "TargetPath": "Views\\Phones\\Create.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

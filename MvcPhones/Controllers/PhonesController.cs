@@ -22,8 +22,11 @@ namespace MvcPhones.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pg=1)
         {
+            
+
+            
             HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
             HttpRequestMessage request = new(method: HttpMethod.Get, requestUri:
             "/api/v1/phones");
@@ -31,7 +34,32 @@ namespace MvcPhones.Controllers
             IEnumerable<Phones>? model = await response.Content.ReadFromJsonAsync<IEnumerable<Phones>>();
             return View(model);
         }
+    
+
+        
+        //Get: Phones/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Phones phones)
+        {
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = "/api/v1/phones";
+
+            HttpResponseMessage response = await client.PostAsJsonAsync(requestUri, phones);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
     }
-
-
 }
