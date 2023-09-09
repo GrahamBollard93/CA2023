@@ -64,6 +64,8 @@ namespace MvcPhones.Controllers
 
 
         //Get: Phones/Create
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -87,7 +89,9 @@ namespace MvcPhones.Controllers
             }
         }
 
-            //Edit: Phones/Create
+            //Edit: Phones
+
+            [Authorize(Roles = "Admin")]
           public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -112,6 +116,7 @@ namespace MvcPhones.Controllers
         }
 
          [HttpPost]
+         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, Phones phones)
         {
             if (id != phones.Id)
