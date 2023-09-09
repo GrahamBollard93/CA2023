@@ -1,0 +1,15 @@
+@{
+    var logoutMessage = TempData["LogoutMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(logoutMessage))
+{
+    <div id="logout-message" class="alert alert-success">@logoutMessage</div>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#logout-message").fadeOut();
+            }, 3000);
+        });
+    </script>
+}

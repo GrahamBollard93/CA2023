@@ -12,15 +12,15 @@ var connectionString = builder.Configuration
 builder.Services.AddDbContext<MvcPhonesDbContext>(options => 
 options.UseSqlite(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => 
-    options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<MvcPhonesDbContext>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Register HTTP Client - For RetroShirtsApi/Products
+// Register HTTP Client - For PhonesApi/Products
 builder.Services.AddHttpClient("PhonesApi", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5002/");
@@ -54,4 +54,39 @@ app.MapControllerRoute(
     pattern: "{controller=Phones}/{action=Index}/{id?}");
 
 app.MapRazorPages();
+
+using(var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var roles = new[] {"Admin", "Member", "Manager"};
+
+    foreach (var role in roles)
+    {
+        if(!await roleManager.RoleExistsAsync(role))
+            await roleManager.CreateAsync(new IdentityRole(role));
+    }
+}
+
+using(var scope = app.Services.CreateScope())
+{
+    var userManager = 
+        scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+    string email = "admin@admin.com";
+    string password = "Test1234!";
+
+    if(await userManager.FindByEmailAsync(email) == null)
+    {
+        var user = new IdentityUser();
+        user.UserName = email;
+        user.Email = email;
+
+        await userManager.CreateAsync(user, password);
+
+        await userManager.AddToRoleAsync(user, "Admin");
+    }
+   
+}
+
 app.Run();
