@@ -1,3 +1,4 @@
+using System.IO.Compression;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -22,11 +23,8 @@ namespace MvcPhones.Controllers
         }
 
 
-        public async Task<IActionResult> Index(int pg=1)
+        public async Task<IActionResult> Index()
         {
-            
-
-            
             HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
             HttpRequestMessage request = new(method: HttpMethod.Get, requestUri:
             "/api/v1/phones");
@@ -34,9 +32,7 @@ namespace MvcPhones.Controllers
             IEnumerable<Phones>? model = await response.Content.ReadFromJsonAsync<IEnumerable<Phones>>();
             return View(model);
         }
-    
 
-        
         //Get: Phones/Create
         public IActionResult Create()
         {
@@ -44,8 +40,7 @@ namespace MvcPhones.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Phones phones)
+         public async Task<IActionResult> Create(Phones phones)
         {
             HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
             string requestUri = "/api/v1/phones";

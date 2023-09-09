@@ -1,7 +1,8 @@
-@model MvcPhones.Models.Phones
+@model Phones
+
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add a new phone";
 }
 
 <div class="row text">
@@ -13,35 +14,36 @@
                 <div class ="col-md-8 offset-2">
                     <form asp-action="Create">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    </form>
-                    <div class ="form-group">
-                        <label asp-for="ImageUrl" class="control-label"></label>
-                        <input asp-for="ImageUrl" class ="form-control"/>
-                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
-                    </div>
-                    <div class ="form-group">
-                        <label asp-for="Brand" class="control-label"></label>
-                        <input asp-for="Brand" class ="form-control"/>
-                        <span asp-validation-for="Brand" class="text-danger"></span>
-                    </div>
-                    <div class ="form-group">
-                        <label asp-for="Model" class="control-label"></label>
-                        <input asp-for="Model" class ="form-control"/>
-                        <span asp-validation-for="Model" class="text-danger"></span>
-                    </div>
-                    <div class ="form-group">
-                        <label asp-for="Price" class="control-label"></label>
-                        <input asp-for="Price" class ="form-control"/>
-                        <span asp-validation-for="Price" class="text-danger"></span>
+                        <div class="form-group text-center">
+                            <img id="ImageUrlPreview"/>
+                        <div class ="form-group>">
+                            <label asp-for="ImageUrl" class="control-label"></label>
+                            <input asp-for="ImageUrl" class ="form-control"/>
+                            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                        </div>
+                        <div class ="form-group">
+                            <label asp-for="Brand" class="control-label"></label>
+                            <input asp-for="Brand" class ="form-control"/>
+                            <span asp-validation-for="Brand" class="text-danger"></span>
+                        </div>
+                        <div class ="form-group">
+                            <label asp-for="Model" class="control-label"></label>
+                            <input asp-for="Model" class ="form-control"/>
+                            <span asp-validation-for="Model" class="text-danger"></span>
+                        </div>
+                        <div class ="form-group">
+                            <label asp-for="Price" class="control-label"></label>
+                            <input asp-for="Price" class ="form-control"/>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
                     
                         <div class = "form-group">
                             <input type="submit" value ="Create" class="btn btn-outline-success float-right"/>
                             <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
 
-                        </div>
+                    </form>
                         
-                    
-                    </div>
+                        </div>
                 </div>
             </div>
     </div>
