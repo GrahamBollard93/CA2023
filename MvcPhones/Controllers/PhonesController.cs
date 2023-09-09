@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcPhones.Data;
 using MvcPhones.Models;
+using System.Net;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+
 
 
 
@@ -33,6 +37,32 @@ namespace MvcPhones.Controllers
             return View(model);
         }
 
+        //Phone Details
+        public async Task<IActionResult> Details(int? id)
+        {
+
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = $"/api/v1/phones/{id}";
+
+            HttpResponseMessage response = await client.GetAsync(requestUri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var product = await response.Content.ReadFromJsonAsync<Phones>();
+                return View(product);
+            }
+            else if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                return NotFound();
+            }
+            else
+            {
+                // Handle other error cases
+                return StatusCode((int)response.StatusCode);
+            }
+        }
+
+
         //Get: Phones/Create
         public IActionResult Create()
         {
@@ -56,5 +86,54 @@ namespace MvcPhones.Controllers
                 return StatusCode((int)response.StatusCode);
             }
         }
+
+            //Edit: Phones/Create
+          public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = $"/api/v1/phones/{id}";
+
+            HttpResponseMessage response = await client.GetAsync(requestUri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var product = await response.Content.ReadFromJsonAsync<Phones>();
+                return View(product);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
+
+         [HttpPost]
+        public async Task<IActionResult> Edit(int id, Phones phones)
+        {
+            if (id != phones.Id)
+            {
+                return BadRequest();
+            }
+
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = $"/api/v1/phones/{id}";
+
+            HttpResponseMessage response = await client.PutAsJsonAsync(requestUri, phones);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Details", new { id = phones.Id });
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
+
+  
     }
 }

@@ -24275,6 +24275,21 @@
       "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Edit.cshtml",
+      "TargetPath": "Views\\Phones\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Details.cshtml",
+      "TargetPath": "Views\\Phones\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\CA2023\\CA2023\\CA2023\\MvcPhones\\Views\\Phones\\Delete.cshtml",
+      "TargetPath": "Views\\Phones\\Delete.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
