@@ -116,3 +116,22 @@ The contact form typically includes fields for the customer to input their name,
 - The Controller component acts as an intermediary between the Model and the View. It handles user requests and manages the flow of data between these two components.
 - Controllers receive user actions, determine which Model methods to invoke, and decide how the resulting data should be presented to the user through the View. Importantly, the Model and View components interact with the Controller, but not directly with each other.
 
+**Improvements**
+Due to time constraints I would have like to added/improved the following:
+-Search Function (attempted)
+-Sort Function
+-Pagination (attempted)
+-Shopping Cart
+-Payments Page
+-User Interface 
+
+**References**
+MVC setup - https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-7.0&tabs=visual-studio-code
+API setup - https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio
+HTTP Requests Client - https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient
+Crud Ops (Create, Edit, Delete)- https://www.youtube.com/watch?v=rtqmn0YwCwA, https://www.youtube.com/watch?v=yCqeo7dND_A, https://www.youtube.com/watch?v=R0_ArEgZWj4
+User Registartion - https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-7.0
+Authorise Roles - https://www.youtube.com/watch?v=Y6DCP-yH-9Q
+Previous learnings from modules throughout course
+
+
