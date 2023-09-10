@@ -63,7 +63,7 @@ namespace MvcPhones.Controllers
         }
 
 
-        //Get: Phones/Create
+        //Get: Phones/Create - https://www.youtube.com/watch?v=rtqmn0YwCwA
 
         [Authorize(Roles = "Admin")]
         public IActionResult Create()
@@ -89,7 +89,7 @@ namespace MvcPhones.Controllers
             }
         }
 
-            //Edit: Phones
+            //Edit: Phones - https://www.youtube.com/watch?v=yCqeo7dND_A
 
             [Authorize(Roles = "Admin")]
           public async Task<IActionResult> Edit(int? id)
@@ -138,7 +138,8 @@ namespace MvcPhones.Controllers
                 return StatusCode((int)response.StatusCode);
             }
         }
-
+        
+        //Delete Phones - https://www.youtube.com/watch?v=R0_ArEgZWj4
           [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {

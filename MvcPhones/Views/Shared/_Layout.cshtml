@@ -32,13 +32,8 @@
                         </li>
                     </ul>
 
-                    <form asp-action="Index" method="POST">
-                        <div class ="row input-group">
-                            <input type ="text" name="search" id="search" class="form-control"/>
-                            <div class = "input-group-btn">
-                                <input type="submit" value="Search" class ="btn btn-primary"/>
-                            </div>
-                        </div>
+                    <form class="form-inline my-2 my-lg-0" asp-controller ="phones" asp-action = "Filter" style="padding-right: 25px;">
+                        <input name = "searchString" type="text" class="form-control" placeholder="Search for a phone....">
                     </form>
                     
                     <partial name="_LoginPartial" />

@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Contact Us";
+    ViewData["Title"] = "ContactUs";
 }
 <div class="text-center">
     <h1 class="display-4">Contact Us</h1>
@@ -7,7 +7,63 @@
 <br>
 <br>
 <body>
-    <div class = "text-center">
-        <p></b>Welcome to <b>Gecko!</b></p>
+    <div>
+        <p> 📆 Our support team responds to messages Monday to Saturday, excluding Irish bank holidays, and information about these can be found here. 
+        On these days our support team will be unavailable and our phone lines will be offline.</p>
+        <br>
+        <p>⏱️ We respond to all messages within 1-2 working days. Unless you need to provide extra information, please refrain from messaging 
+        able to respond to your last communication, as this will affect how quickly we can get back to you.</p>
     </div>
-</body>
+    <br>
+    <br>
+     <form id="fcf-form-id" class="fcf-form-class" onsubmit="sendEmail(); reset(); return false; ">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+
+    </form>
+    </div>
+    <script src = "https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : 
+        Password : 
+        To : 
+        From : document.getElementById("email").value,
+        Subject : "New Contact From Enquiry",
+        Body : "Name: " + document.getElementById("name").value
+              + "<br> Email"  + document.getElementById("email").value
+              + "<br> Message: " + document.getElementById("message").value
+
+      }).then(
+      message => alert("Message Sent Successfully")
+      );
+    }
+    </script>
+  </body>
+</html>
