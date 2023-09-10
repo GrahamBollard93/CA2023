@@ -139,8 +139,47 @@ namespace MvcPhones.Controllers
             }
         }
 
-       
+          [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return BadRequest();
+            }
 
-  
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = $"/api/v1/phones/{id}";
+
+            HttpResponseMessage response = await client.GetAsync(requestUri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var product = await response.Content.ReadFromJsonAsync<Phones>();
+                return View(product);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            HttpClient client = _clientFactory.CreateClient(name: "PhonesApi");
+            string requestUri = $"/api/v1/phones/{id}";
+
+            HttpResponseMessage response = await client.DeleteAsync(requestUri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode);
+            }
+        }
     }
 }

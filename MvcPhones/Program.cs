@@ -68,6 +68,8 @@ using(var scope = app.Services.CreateScope())
     }
 }
 
+
+// https://www.youtube.com/watch?v=Y6DCP-yH-9Q
 using(var scope = app.Services.CreateScope())
 {
     var userManager = 
