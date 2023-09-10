@@ -32,9 +32,13 @@
                         </li>
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0" asp-controller ="phones" asp-action = "Filter" style="padding-right: 25px;">
-                        <input name = "searchString" type="text" class="form-control" placeholder="Search for a phone....">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type = "submit"><i class="bi bi-search"></i></i></button>
+                    <form asp-action="Index" method="POST">
+                        <div class ="row input-group">
+                            <input type ="text" name="search" id="search" class="form-control"/>
+                            <div class = "input-group-btn">
+                                <input type="submit" value="Search" class ="btn btn-primary"/>
+                            </div>
+                        </div>
                     </form>
                     
                     <partial name="_LoginPartial" />
@@ -50,7 +54,9 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
+            <div class="text-center">
             &copy; 2023 - Gecko 
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
